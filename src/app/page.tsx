@@ -12,7 +12,7 @@ import {
   Line,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
+//import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
@@ -121,7 +121,7 @@ export default function Home() {
         </Column>
       )}
       <Projects range={[2]} />
-      <Mailchimp />
+      {/*<Mailchimp />*/}
     </Column>
   );
 }
