@@ -229,7 +229,7 @@ const about: About = {
       },  {
         title: "Technical Troubleshooting",
         description: (
-          <>Diagnosing and resolving system issues, network troubleshooting. </>
+          <>Diagnosing and resolving system issues, network troubleshooting, and documenting incidents using Jira ticketing system. </>
         ),
         tags: [
 
