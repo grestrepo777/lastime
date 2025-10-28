@@ -1,7 +1,7 @@
 
 ---
 title: "Windows Defender for Endpoint [EDR]"
-summary: "Development of an AI-powered Retrieval-Augmented Generation (RAG) system and a custom-built AI Agent to showcase practical applications of large language models (LLMs) in knowledge retrieval and task automation. "
+summary: "Implementation of a Endpoint Detection and Response (EDR) lab environment using Microsoft Defender for Endpoint (MDE) to simulate, detect, and analyze security incidents, demonstrating practical SOC analyst skills in threat monitoring and response."
 images: 
 - "/images/projects/logo.png"
 
@@ -12,34 +12,32 @@ team:
 ---
 
 ## Screenshot 
-https://imgur.com/gallery/rag-system-project-ilURBrT
+https://imgur.com/a/wde-project-b5wbRnE
 
 ## Overview
 
-Built an interactive AI code sandbox leveraging a Retrieval-Augmented Generation (RAG) pipeline. Users can input code snippets and receive context-aware responses, explanations, or suggested improvements, demonstrating practical applications of LLMs in code analysis and experimentation.  
+Built a hands-on EDR lab environment leveraging Microsoft Defender for Endpoint on both VM and host machines. The lab simulated malware-like behaviors using an EICAR file, which was captured and analyzed in the MDE portal. This environment allowed for testing alerting, investigation, and incident response workflows in a safe, controlled setting.  
 
 ## Key Features
 
-- **Interactive Code Input**: Users can submit arbitrary code snippets to the sandbox for real-time analysis.
-- **Context-Aware AI Responses**: The RAG pipeline retrieves relevant code patterns or examples to provide informed suggestions and explanations. 
-- **Experimentation Environment**: Provides a safe environment to test code, explore behavior, and validate AI-driven insights. 
-- **Extensible**: Designed to handle multiple code inputs and languages while remaining responsive and reliable. 
+- **Onboard Devices**: Successfully onboarded Windows Server 2022 VM and host Windows 11 machine to MDE.
+- **Telemetry Generation**: Generated process, file, and alert events using EICAR test files. 
+- **Alert Monitoring**: Verified that telemetry events appeared in the portal and could be queried.  
+- **SOC Workflow Simulation**: Practiced alert investigation and process analysis. 
 
 ## Technologies Used
 
-- **Python**: Core backend logic and RAG pipeline implementation. 
-- **OpenAI / LLMs**: Generates intelligent responses and suggestions for user-provided code.
-- **Vector Database**: Stores code embeddings for efficient semantic retrieval. 
+- **Microsoft Defender for Endpoint (MDE)**: Endpoint detection, telemetry, and alert management. 
+- **PowerShell**: Onboarding scripts, process simulation, and telemetry generation.
+- **Windows Server 2022/Windows 11**: Lab environment and endpoint testing. 
 
 ## Challenges and Learnings
 
-A key challenge was ensruing that the AI provided relevant and accurate suggestions for diverse code snippets. This required fine-tuning the prompts to make sure the responses were valid and helpful. 
-Also, making sure I had a good understanding of what each component in the RAG pipeline was supposed to do was important to consider. 
+A key challenge was correctly onboarding the Windows Server 2022 VM. Originally I had tried to onboard a regular Windows 10 VM and after a while of unsuccessful attempts I found out that I could not onboard Windows Home devices. Eventually, I found out that I could onboard a Windows Server 2022 VM I already had for a different project. Another challenge was figuring out how to test the alerts on the MDE portal but I found out I could use an EICAR file. 
 
 ## Outcome
 
-The RAG-powered AI code sandbox allows users to interactively analyze, explore, and understand code snippets.  
-
+The EDR lab successfully demonstrated the end-to-end flow of threat detection and investigation in MDE. Telemetry from simulated test events could be visualized, queried, and analyzed, providing hands-on experience in SOC operations. 
 ---
 
-This project demonstrates the practical application of LLMs for code reasoning, experimentation, and education as well as providing a secure and safe sandbox to learn and practice. This showcases my ability to combine AI with developer-focused tools. 
+This project highlights practical skills in endpoint detection, alert investigation, and incident response using Microsoft Defender for Endpoint in a lab environment 
