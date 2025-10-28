@@ -1,43 +1,40 @@
-
 ---
-title: "Windows Defender for Endpoint [EDR]"
-summary: "Implementation of a Endpoint Detection and Response (EDR) lab environment using Microsoft Defender for Endpoint (MDE) to simulate, detect, and analyze security incidents, demonstrating practical SOC analyst skills in threat monitoring and response."
+title: "Custom IDS on Linux Using Suricata"
+summary: "Configured and deployed an Intrusion Detection System (IDS) using Suricata to detect and analyze malicious network activity. This project demonstrated practical skills in network traffic monitoring, alert analysis, and secure system administration using PuTTY."
 images: 
-- "/images/projects/logo.png"
-
+- "/images/projects/suricata.png"
 
 team:
   - name: "Geronimo Restrepo"
     linkedIn: "https://www.linkedin.com/in/geronimo-restrepo-7154601aa/"
+
 ---
 
-## Screenshot 
-https://imgur.com/a/wde-project-b5wbRnE
+## Screenshots
+https://imgur.com/a/30sOHeE
 
 ## Overview
 
-Built a hands-on EDR lab environment leveraging Microsoft Defender for Endpoint on both VM and host machines. The lab simulated malware-like behaviors using an EICAR file, which was captured and analyzed in the MDE portal. This environment allowed for testing alerting, investigation, and incident response workflows in a safe, controlled setting.  
+This projected invovled building and configuring a Network Intrusion Detection System (IDS) using Suricata to analyze replayed network traffic downloaded from a .pcap file online using tcpreplay. Captured packets were sent through a virtual network interface allowing suricata to generate alerts based on suspicious patterns. The environment was managed through PuTTY for remote access and system control, emphasizing real-world SOC workflows such as alert investigation, log correlation, and network event interpretation. 
 
 ## Key Features
 
-- **Onboard Devices**: Successfully onboarded Windows Server 2022 VM and host Windows 11 machine to MDE.
-- **Telemetry Generation**: Generated process, file, and alert events using EICAR test files. 
-- **Alert Monitoring**: Verified that telemetry events appeared in the portal and could be queried.  
-- **SOC Workflow Simulation**: Practiced alert investigation and process analysis. 
+- **Implemented Suricata IDS**: Allows me to monitor network traffic and detect potential threats using rule-based detection. 
+- **Analyzed Network Packets**: I was able to extract important information and familiarize myself with pcap files and figure out what it is I need to look for when analyzing packets. 
+- **Correlated Alerts and Network Behavior**: I was able to identify abnormal traffic patterns and prioritize incidents. 
+- **Used PuTTY for Secure SSH Access**: I learned how to remotely manage and monitor my Ubuntu Server environment. 
 
 ## Technologies Used
 
-- **Microsoft Defender for Endpoint (MDE)**: Endpoint detection, telemetry, and alert management. 
-- **PowerShell**: Onboarding scripts, process simulation, and telemetry generation.
-- **Windows Server 2022/Windows 11**: Lab environment and endpoint testing. 
+- **Linux - Ubuntu Server**: Operating system used for the project.  
+- **Suricata**: Used to perform rule based packet inspection and alerts.  
+- **PuTTY**: Used to remotely manage Linux-based tools. I also wanted to understand how to connect my VM to PuTTY because I did not think it was possible before this project. 
+- **tcpreplay**: To download packet captures
 
 ## Challenges and Learnings
 
-A key challenge was correctly onboarding the Windows Server 2022 VM. Originally I had tried to onboard a regular Windows 10 VM and after a while of unsuccessful attempts I found out that I could not onboard Windows Home devices. Eventually, I found out that I could onboard a Windows Server 2022 VM I already had for a different project. Another challenge was figuring out how to test the alerts on the MDE portal but I found out I could use an EICAR file. 
+The biggest challenge was actually PuTTY itself. It was the first time I have ever used it and prior to this project I did not know that I could connect it to a VM. I came across challenges when trying to connect the VM to PuTTY itself. I found a temporary solution by switching between bridged adpaters and NAT in the network settings on the VM. Another challenge was building Suricata from scratch, which was what I did. I found that it was more customizable doing it that way but a lot more confusing. Going through the .yaml file on Suricata and looking for what I needed to change was a challenge but it was rewarding because the final outcome worked how I wanted it to work. 
 
 ## Outcome
 
-The EDR lab successfully demonstrated the end-to-end flow of threat detection and investigation in MDE. Telemetry from simulated test events could be visualized, queried, and analyzed, providing hands-on experience in SOC operations. 
----
-
-This project highlights practical skills in endpoint detection, alert investigation, and incident response using Microsoft Defender for Endpoint in a lab environment 
+The final outcome was an intrusion detection system that took in a large packet capture that I downloaded online and using rules downloaded online suricata was able to label different event by severity and other descriptions. 
