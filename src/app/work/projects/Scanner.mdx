@@ -1,0 +1,36 @@
+---
+title: "Vulnerability/Port Scanner Using Nessus"
+summary: "Implementation of a vulnerability assessment lab using Nessus Essentials to scan, identify, and prioritize security weaknesses across my local machine, demonstrating practicial vulnerability management, CVE analysis, and remediation verification skills. "
+images: 
+- "/images/projects/logo.png"
+
+
+team:
+  - name: "Geronimo Restrepo"
+    linkedIn: "https://www.linkedin.com/in/geronimo-restrepo-7154601aa/"
+---
+
+## Screenshot 
+https://imgur.com/a/wde-project-b5wbRnE
+
+## Overview
+
+Used Nessus Essentials on my local machine to simulate real-world scanning scenarios to identify vulnerabilities such as missing patches, insecure SMB configurations, and untrusted SSL certificates. This environment allowed for testing vulnerability discover, prioritization, and a better understanding on the danger of certain open ports on machines. 
+## Key Features
+
+- **Vulnerability Discovery**: Identified medium-severity findings such as SMB signing not required, untrusted SSL certificates, and open network ports.
+- **Port Discovery**: Identified open ports on the local machine and analyzed potential dangers in keeping those ports open.  
+- **Risk Prioritization**: Analyzed CVSS scores and CVE details to prioritize remediation efforts. 
+
+## Technologies Used
+
+- **Nessus Essentials**: Vulnerability scanning, port scanning, and configuration assessment. 
+
+## Challenges and Learnings
+
+There weren't really any challenges since  was a simple piece of software to use. A majority of my learnings came from the open ports I had on my local machine. When I ran the host discovery scan type I had ports 135, 445, 49664, 49665, 49666, 49667, 49670, and 49673 open. After some research I found out that ports 135 (RPC Endpoint Mapper) and port 445 (SMB over TCP) are typically open by default on windows devices. RPC Endpoint Mapper is used by RPC/DCOM services to help clients locate the dynamic port for a particular RPC service which are usually ephemeral ports which also explains why ports 49664-49673 are open. SMB over TCP is used for file and printer sharing and some Windows network services. The ephemeral ports are open and available for RPC services which are assigned a port from the range: 49664-49673.  
+I also learned about the vulnerabilities scanned on my device which were SSL Certificate cannot be trusted and SMB signing not required. With the SSL Certificate vulnerability I found out that it means that the certificate issued for the connection between my device and Nessus for the scan wasn't recognized as a certificate issued by a valid Certificate Authority, however, since I ran the scan on my localhost the certificate was self-signed which means that it didn't come from a trusted CA so Nessus flags it a true positive but in this situation it was always going to show up. For the other vulnerability, SMB signing not required, this means that my computer allows SMB communication without verifying message integrity and this is something that is enabled by default on most Windows devices to allow for backward compatibility with older devices. 
+
+## Outcome
+
+The Nessus lab successfully demonstrated the end-to-end flow of vulnerability scanning, analysis, and remediation verification. Findings such as SMB signing not required, untrusted SSL certificates, and open ports were identified and prioritized providing hands-on experience in vulnerability management and SOC-style risk assessment workflows. 
