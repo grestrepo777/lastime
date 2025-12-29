@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Geronimo",
   lastName: "Restrepo",
   name: `Geronimo Restrepo`,
-  role: "Aspiring Cybersecurity & AI Professional",
+  role: "Aspiring Cybersecurity Professional",
   //avatar: "/images/avatar.jpg",
   email: "geronimocol@gmail.com",
   location: "US/Eastern", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -101,13 +101,16 @@ const about: About = {
         role: "Customer Service Representative",
         achievements: [
           <>
-            Ensured consistent adherence to company policies and safety protocols, contributing to a compliant and organized workspace. 
+            Assisted an average of 50-80 customers per shift in a high-traffic environment while maintaining professionalism and accuracy.  
           </>,
           <>
-            Provided frontline support for customers, troubleshooting issues and ensuring satisfaction, which honed skills in user interaction and problem resolution. 
+            Documented and escalated 15-25 customer-reported issues per shift, ensuring accurate handoff to my supervisor for resolution. 
           </>,
           <>
-            Resolved customer issues promptly and efficiently, maintaining a positive and professional demeanor, which contributed to a high level of customer satisfaction.           
+            Collected relevant details, timelines, and impact information to support effective issue triage and follow-up. 
+          </>,
+          <>
+            Communicated clearly with supervisors and team members to support efficient resolution of escalated issues.            
           </>,
         ],
         images: [],
@@ -132,7 +135,7 @@ const about: About = {
       {
         title: "Security Operations",
         description: (
-          <>Hands-on experience with SIEM tools (Splunk), SOAR platforms, and EDR solutions through simulated environments. Familiar with incident response workflows, alert triage, and IOC analysis. Knowledge of threat detection using MITRE ATT&CK, Cyber Kill Chain, and Diamond model.</>
+          <>Hands-on experience with SIEM tools (Splunk), EDR solutions (Windows Defender for Endpoint), IDS (Suricata), and vulnerability management tools (Nessus Essentials) for alert investigation, triage, incident response and vulnerability asseessment. Familiar with Indicators of Compromise (IOCs) Tactics, Techniques, and Procedures (TTPs), and prioritizing vulnerabilities based on CVSS and CVE analysis. Knowledge of MITRE ATT&CK Framework, Cyber Kill Chain, Diamond model, and threat intelligence analysis.</>
         ),
         tags: [
         ],
@@ -143,7 +146,7 @@ const about: About = {
       {
         title: "Network Analysis and Troubleshooting",
         description: (
-          <>Proficient in Wireshark for packet capture, network traffic analysis, and troubleshooting network performance issues; experienced in identifying anomalies, inspecting network protocols (TCP/IP, DNS, HTTP/S) and analyzing packet flows for security monitoring. </>
+          <>Packet captures and analysis with Wireshark; detection of anomalies in TCP/IP, DNS, and HTTP/S traffic. Network traffic replay, intrusion detection testing, NAT, DHCP, OSPF, and IP routing configuration. Basic Vulnerability assessment and network hardening practices.</>
         ),
         tags: [
 
@@ -154,9 +157,9 @@ const about: About = {
         ],
       },  
       {
-        title: "Cybersecurity Frameworks and Skills",
+        title: "Operating Systems and Endpoint Security",
         description: (
-          <>Familiar with core cybersecurity concepts (e.g., risk management, threat analysis, SIEM tools, networking and protocols). Knowledge of Indicators of Compromise (IOCs) and Tactics, Techniques, and Procedures (TTPs). Familiar with implementing Security Protocols and performing risk assessments. </>
+          <>Windows 10/11, Windows Server 2022, Linux (Ubuntu, Arch). Endpoint protection, patch management, and threat monitoring using Microsoft Defender for Endpoint. </>
         ),
         tags: [
 
@@ -167,21 +170,9 @@ const about: About = {
         ],
       },  
       {
-        title: "Compliance and Regulatory Frameworks",
-        description: (
-          <>Knowledge of GDPR, HIPAA, PCI-DSS, and SOX standards, including data protection principles, security best practices, and compliance requirements for safeguarding sensitive information. </>
-        ),
-        tags: [
-
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-
-        ],
-      },  {
         title: "Programming Languages",
         description: (
-          <>Python (security scripting, log parsing, socket programming), SQL</>
+          <>Python: Security scripting, log parsing, socket programming, automation for SOC workflows. Powershell: Windows management, EDR onboarding scripts, telemetry generation, and automation. </>
         ),
         tags: [
 
@@ -191,9 +182,13 @@ const about: About = {
 
         ],
       },  {
-        title: "Network Security Technology",
+        title: "Cybersecurity Tools and Platforms",
         description: (
-          <>Knowledgeable of firewalls, IDS/IPS, VLANs, and routing to ensure security of the network.</>
+          <>SIEM: Splunk dashboards, log analysis, custom data models. 
+          EDR: Microsoft Defender for Endpoint, telemetry analysis. 
+          Vulnerability Management: Nessus Essentials for scanning, CVE analysis, configuration assessment and remediation verification. 
+          SOAR & Security Simulations: LetsDefend, simulated SOC environments for alert handling and incident response. 
+          Ticketing & Workflow Management: Jira for incident tracking, documentation, and workflow automation. </>
         ),
         tags: [
 
@@ -203,9 +198,9 @@ const about: About = {
 
         ],
       },  {
-        title: "Network Configuration",
+        title: "Soft and Analytical Skills",
         description: (
-          <>Experienced in configuring networks, setting up Cisco routers and switches, implementing OSPF, DHCP, and NAT. Familiar with network protocols (TCP/IP, DNS, HTTP/S) and firewall configurations.</>
+          <>Technical troubleshooting, system/network diagnostics, and incident documentation. Problem-solving, communications, and teamwork in both customer-facing and SOC environments. Analytical thinking for identifying security gaps and proactive risk mitigation. </>
         ),
         tags: [
 
@@ -214,31 +209,7 @@ const about: About = {
         images: [
 
         ],
-      },  {
-        title: "Operating Systems",
-        description: (
-          <>Windows 10/11, Linux. </>
-        ),
-        tags: [
-
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-
-        ],
-      },  {
-        title: "Technical Troubleshooting",
-        description: (
-          <>Diagnosing and resolving system issues, network troubleshooting, and documenting incidents using Jira ticketing system. </>
-        ),
-        tags: [
-
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-
-        ],
-      },  
+      },   
     ],
   },
 };
